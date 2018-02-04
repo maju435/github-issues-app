@@ -1,0 +1,96 @@
+/* cleaning some default properties of web browser's and html elements */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+/* some nice css class for centering the element vertically and horizontally */
+.perfect-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* background with img */
+.background {
+  background-image: url('img/background.jpg');
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+/* main container of MacOS window */
+.macos {
+  height: 500px;
+  width: 650px;
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* sidebar with buttons */
+.macos__sidebar {
+  background-color: rgba(16, 16, 34,1);
+  height: 100%;
+  width: 150px;
+}
+
+/* content container with list of issues */
+.macos__content {
+  background-color: rgb(246, 246, 246);
+  height: 100%;
+  width: 500px;
+}
+
+/* =============== led-buttons ================= */
+
+/* main container for three colored buttons */
+.macos__led-bar {
+  background-color: rgb(16, 16, 34);
+  height: 42px;
+  width: 100%;
+  padding-left: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.macos__led-btn {
+  height: 12px;
+  width: 12px;
+  margin-left: 10px;
+  border-radius: 6px;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+.macos__led-btn:hover {
+  cursor: pointer;
+}
+
+.macos__led-btn--red {
+  background-color: rgb(255, 89, 79);
+}
+.macos__led-btn--red:hover {
+  /*  */
+}
+
+.macos__led-btn--yellow {
+  background-color: rgb(255, 188, 27);
+}
+.macos__led-btn--yellow:hover {
+  /*  */
+}
+
+.macos__led-btn--green {
+  background-color: rgb(0, 205, 70);
+}
+.macos__led-btn--green:hover {
+  /*  */
+}
+
+/* ============================================= */
+
+
+
+.macos__filter-btn {
+  /*  */
+}
