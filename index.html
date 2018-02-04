@@ -22,20 +22,60 @@
 
         <!-- bar with 3x colored led-buttons -->
         <div class="macos__led-bar">
-          <div class="macos__led-btn macos__led-btn--red"></div>
-          <div class="macos__led-btn macos__led-btn--yellow"></div>
-          <div class="macos__led-btn macos__led-btn--green"></div>
+          <button class="macos__led-btn macos__led-btn--red"></button>
+          <button class="macos__led-btn macos__led-btn--yellow"></button>
+          <button class="macos__led-btn macos__led-btn--green"></button>
         </div>
 
-        <!-- bar with issues filters -->
-        <div class="macos__filter-bar">
+        <!-- issue filter tiles -->
+        <button class="macos__filter-btn">
+          <span class="title">
+            <span class="icon icon-git"></span>
+            <span>All</span>
+          </span>
+          <span class="number">12</span>
+        </button>
 
-        </div>
+        <button class="macos__filter-btn">
+          <span class="title">
+            <span class="icon icon-open"></span>
+            <span>Open</span>
+          </span>
+          <span class="number">4</span>
+        </button>
+
+        <button class="macos__filter-btn">
+          <span class="title">
+            <span class="icon icon-closed"></span>
+            <span>Closed</span>
+          </span>
+          <span class="number">8</span>
+        </button>
 
       </div>
 
       <!-- right side content with issues -->
-      <div class="macos__content"></div>
+      <div class="macos__right-content">
+
+        <div class="issue">
+          <div class="issue__date">19-07-2017</div>
+          <input class="issue__title" disabled value="commit"/>
+          <input class="issue__title" disabled value="commit"/>
+        </div>
+
+        <div class="issue">
+          <div class="issue__date">19-07-2017</div>
+          <input class="issue__title" disabled value="commit"/>
+          <input class="issue__title" disabled value="commit"/>
+        </div>
+
+        <div class="issue">
+          <div class="issue__date">19-07-2017</div>
+          <input class="issue__title" disabled value="commit"/>
+          <input class="issue__title" disabled value="commit"/>
+        </div>
+
+      </div>
 
     </div>
 

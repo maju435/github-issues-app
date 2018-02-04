@@ -5,6 +5,11 @@
   outline: none;
 }
 
+button {
+  border: none;
+  background: none;
+}
+
 /* some nice css class for centering the element vertically and horizontally */
 .perfect-center {
   display: flex;
@@ -27,6 +32,7 @@
   display: flex;
   border-radius: 12px;
   overflow: hidden;
+  font-family: sans-serif
 }
 
 /* sidebar with buttons */
@@ -37,7 +43,7 @@
 }
 
 /* content container with list of issues */
-.macos__content {
+.macos__right-content {
   background-color: rgb(246, 246, 246);
   height: 100%;
   width: 500px;
@@ -50,7 +56,7 @@
   background-color: rgb(16, 16, 34);
   height: 42px;
   width: 100%;
-  padding-left: 4px;
+  padding-left: 5px;
   display: flex;
   align-items: center;
 }
@@ -89,8 +95,72 @@
 
 /* ============================================= */
 
-
-
 .macos__filter-btn {
-  /*  */
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.macos__filter-btn:hover {
+  background-color: rgb(20, 20, 42);
+  cursor: pointer;
+}
+
+.macos__filter-btn:focus {
+  background-color: rgb(36, 37, 63);
+}
+
+.macos__filter-btn .title {
+  color: #fff;
+  display: flex;
+}
+
+.macos__filter-btn .number {
+  color: rgb(78, 77, 94);
+}
+
+.icon {
+  height: 16px;
+  width: 16px;
+  margin-right: 9px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  color: #888;
+}
+
+.icon-git {
+  background-image: url('icons/icon-github.svg');
+}
+
+.icon-open {
+  background-image: url('icons/icon-open-issue.svg');
+}
+
+.icon-closed {
+  background-image: url('icons/icon-closed-issue.svg');
+}
+
+.issue {
+  padding: 0 15px;
+}
+
+.issue__date {
+  width: 100%;
+  margin: 10px 0;
+  color: rgb(107, 106, 119);
+  font-size: 11px;
+}
+.issue__title {
+  background-color: rgb(255, 255, 255);
+  height: 40px;
+  width: calc(100% - 12px);
+  margin-bottom: 4px;
+  padding-left: 12px;
+  border-radius: 6px;
+  border: 0.5px solid rgb(221, 225, 230);
+  color: rgb(0,0,0);
+  font-size: 14px;
 }
