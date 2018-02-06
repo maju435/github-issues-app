@@ -1,0 +1,216 @@
+/* 
+
+Made by Mateusz Janeczek 2018 
+
+*/
+
+/* cleaning some default properties of web browsers and html elements */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+button {
+  border: none;
+  background: none;
+}
+/*  */
+
+.background {
+  background: url(img/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.blur-mask {
+  margin-left: calc(50% - 650px/2);
+  margin-top: calc(50vh - 250px);
+  position: absolute;
+  width: 200px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.blur-mask__background {
+  background: url(img/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  position: absolute;
+  filter: 
+    blur(15px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+  margin: -25px -25px -25px -25px;
+  width: 250px;
+  height: 550px;
+}
+
+/* main container of MacOS window */
+.macos {
+  height: 500px;
+  width: 650px;
+  display: flex;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: sans-serif;
+  position: absolute;
+  margin-left: calc(50% - 650px/2);
+  margin-top: calc(50vh - 250px);
+}
+
+/* sidebar with buttons */
+.macos__sidebar {
+  background-color: rgba(16, 16, 34,0.9);
+  height: 100%;
+  width: 150px;
+}
+
+/* content container with list of issues */
+.macos__right-content {
+  background-color: rgb(246, 246, 246);
+  height: 100%;
+  width: 500px;
+  overflow: auto;
+}
+
+/* led-buttons */
+.macos__led-bar {
+  background-color: rgb(16, 16, 34);
+  height: 42px;
+  width: 100%;
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.macos__led-btn {
+  height: 12px;
+  width: 12px;
+  margin-left: 10px;
+  border-radius: 6px;
+  transition: all 350ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+.macos__led-btn:hover {
+  cursor: pointer;
+}
+
+.macos__led-btn--red {
+  background-color: rgb(255, 89, 79);
+}
+.macos__led-btn--red:hover {
+  box-shadow: 0 0 6px 1px rgb(255, 116, 109);
+}
+
+.macos__led-btn--yellow {
+  background-color: rgb(255, 188, 27);
+}
+.macos__led-btn--yellow:hover {
+  box-shadow: 0 0 6px 1px rgb(253, 197, 64);
+}
+
+.macos__led-btn--green {
+  background-color: rgb(0, 205, 70);
+}
+.macos__led-btn--green:hover {
+  box-shadow: 0 0 6px 1px rgb(11, 230, 84);
+}
+
+/* filter buttons in left sidebar */
+.macos__filter-btn {
+  height: 50px;
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  transition: all 150ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+.macos__filter-btn:hover {
+  background-color: rgba(30, 30, 47, 0.6);
+  cursor: pointer;
+}
+
+.macos__filter-btn:focus {
+  background-color: rgb(36, 37, 63);
+}
+
+.macos__filter-btn .filter-name {
+  color: #fff;
+  display: flex;
+}
+
+.macos__filter-btn .filter-btn__number {
+  color: rgb(102, 102, 120);
+}
+
+.filter__icon {
+  height: 16px;
+  width: 16px;
+  margin-right: 9px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  color: #888;
+}
+
+.filter__icon--git {
+  background-image: url('icons/icon-github.svg');
+}
+
+.filter__icon--open {
+  background-image: url('icons/icon-open-issue.svg');
+}
+
+.filter__icon--closed {
+  background-image: url('icons/icon-closed-issue.svg');
+}
+
+/* issues */
+.issue {
+  padding: 0 15px;
+}
+
+.issue__date {
+  width: 100%;
+  margin: 10px 0;
+  color: rgb(169, 169, 175);
+  font-size: 11px;
+}
+
+.issue__title {
+  background-color: rgb(255, 255, 255);
+  height: 40px;
+  width: calc(100% - 24px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  padding: 0 12px;
+  border-radius: 6px;
+  border: 0.5px solid rgb(221, 225, 230);
+  color: rgb(0,0,0);
+  font-size: 14px;
+}
+
+.issue__icon--star {
+  height: 16px;
+  width: 16px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-image: url('icons/icon-star.svg');
+  transition: all 350ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+.issue__icon--star:hover {
+  cursor: pointer;
+}
+
+.issue__icon--star:focus {
+  background-image: url('icons/icon-star-active.svg');
+}

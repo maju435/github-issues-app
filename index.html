@@ -1,3 +1,9 @@
+<!-- 
+
+Made by Mateusz Janeczek 2018
+
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,13 +13,18 @@
   <title>MacOS front-end</title>
 
   <!-- import MacOS window theme -->
-  <link rel="stylesheet" href="macos_static_files/macos.css">
+  <link rel="stylesheet" href="macos/macos.css">
 
 </head>
 <body>
+    <!-- main background of app-->
+    <div class="background"></div>
 
-  <div class="background perfect-center">
-
+    <!-- left sidebar blur background -->
+    <div class="blur-mask">
+      <div class="blur-mask__background"></div>
+    </div>
+    
     <!-- MacOS window -->
     <div class="macos">
 
@@ -29,27 +40,27 @@
 
         <!-- issue filter tiles -->
         <button class="macos__filter-btn">
-          <span class="title">
-            <span class="icon icon-git"></span>
+          <span class="filter-name">
+            <span class="filter__icon filter__icon--git"></span>
             <span>All</span>
           </span>
-          <span class="number">12</span>
+          <span class="filter-btn__number">12</span>
         </button>
 
         <button class="macos__filter-btn">
-          <span class="title">
-            <span class="icon icon-open"></span>
+          <span class="filter-name">
+            <span class="filter__icon filter__icon--open"></span>
             <span>Open</span>
           </span>
-          <span class="number">4</span>
+          <span class="filter-btn__number">4</span>
         </button>
 
         <button class="macos__filter-btn">
-          <span class="title">
-            <span class="icon icon-closed"></span>
+          <span class="filter-name">
+            <span class="filter__icon filter__icon--closed"></span>
             <span>Closed</span>
           </span>
-          <span class="number">8</span>
+          <span class="filter-btn__number">8</span>
         </button>
 
       </div>
@@ -57,29 +68,70 @@
       <!-- right side content with issues -->
       <div class="macos__right-content">
 
+        <!-- issues in single day -->
         <div class="issue">
-          <div class="issue__date">19-07-2017</div>
-          <input class="issue__title" disabled value="commit"/>
-          <input class="issue__title" disabled value="commit"/>
+          <div class="issue__date">19-07-2016</div>
+
+          <!-- one single issue -->
+          <div class="issue__title">
+            <span>Page changes</span>
+            <button class="issue__icon--star"></button>
+          </div>
+
+          <div class="issue__title">
+            <span>Review of last issues</span>
+            <button class="issue__icon--star"></button>
+          </div>
+
         </div>
 
         <div class="issue">
-          <div class="issue__date">19-07-2017</div>
-          <input class="issue__title" disabled value="commit"/>
-          <input class="issue__title" disabled value="commit"/>
+          <div class="issue__date">18-07-2016</div>
+          <div class="issue__title">
+            <span>Visual UI Update Review</span>
+            <button class="issue__icon--star"></button>
+          </div>
+          <div class="issue__title">
+            <span>Sidebar changes</span>
+            <button class="issue__icon--star"></button>
+          </div>
         </div>
 
         <div class="issue">
-          <div class="issue__date">19-07-2017</div>
-          <input class="issue__title" disabled value="commit"/>
-          <input class="issue__title" disabled value="commit"/>
+          <div class="issue__date">15-07-2016</div>
+          <div class="issue__title">
+            <span>Crash update</span>
+            <button class="issue__icon--star"></button>
+          </div>
+          <div class="issue__title">
+            <span>Page visual UI Update Review</span>
+            <button class="issue__icon--star"></button>
+          </div>
+          <div class="issue__title">
+            <span>Sidebar update</span>
+            <button class="issue__icon--star"></button>
+          </div>
+        </div>
+
+        <div class="issue">
+          <div class="issue__date">14-07-2016</div>
+          <div class="issue__title">
+            <span>Crash issue</span>
+            <button class="issue__icon--star"></button>
+          </div>
+          <div class="issue__title">
+            <span>Visual update & Crash resolve</span>
+            <button class="issue__icon--star"></button>
+          </div>
+          <div class="issue__title">
+            <span>Some issue</span>
+            <button class="issue__icon--star"></button>
+          </div>
         </div>
 
       </div>
 
     </div>
-
-  </div>
-
+    
 </body>
 </html>
